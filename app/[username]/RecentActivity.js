@@ -79,7 +79,7 @@ const Activity = ({ event: { type, action, repo, size, issue, commits, branch, r
                     Pushed {size} commit(s) to <a href={repo.url}>{repo.name}</a> on branch{' '}
                     <span className="rounded bg-gray-700 px-1 py-0.5 font-[monospace] text-sm">{branch}</span>
                     <ol className="mt-1 list-inside list-disc text-xs md:text-sm text-gray-400">
-                        {commits.map((commit, i) => (
+                        {commits?.map((commit, i) => (
                             <li key={i}>{commit.message}</li>
                         ))}
                     </ol>
